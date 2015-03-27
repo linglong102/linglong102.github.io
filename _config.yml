@@ -100,9 +100,7 @@ gallery:
   # custom configuration for individual gallery
   # best_image is image for the index page (defaults to last image)
   galleries:
-    xitang:
-      best_image: IMG_5975.jpg
-      catetory_tag: 西塘
-      gallery_time: 2012年12月
+    Joway:
+    best_image: 01.JPG
     
 

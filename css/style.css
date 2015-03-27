@@ -1,4 +1,4 @@
-/*
+﻿/*
 	Aerial 1.0 by HTML5 UP
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
@@ -65,6 +65,53 @@
 		top: 0;
 		width: 100%;
 	}
+	
+/*gallery */
+#gallery a img {
+    border-style: ;
+}
+#gallery img {
+    border-style: solid;
+    border-color: #b39898;
+    border-width: 3px;
+    padding-bottom: 37px;
+}
+
+#gallery div {
+    padding-top: -20px;
+}
+
+#gallery h5 {
+    text-decoration: none;
+    font-family: "Lucida Grande", Verdana, sans-serif;
+    font-variant: small-caps;
+    margin-top: -37px;
+    margin-left: -29px;
+}
+
+#gallery ul {
+  width:100%;
+  overflow:hidden;
+}
+#gallery ul li {
+  list-style-type:none;
+  float:left;
+  width:50%;
+}
+#gallery ul li h5 {
+  text-decoration: none;
+    font-family: "Lucida Grande", Verdana, sans-serif;
+    font-variant: small-caps;
+  font-size:17px;
+}
+
+#rdbWrapper {
+    margin-right: 0;
+    margin-top: -26px;
+    margin-left: 350px;
+}
+
+
 
 /* BG */
 
@@ -84,7 +131,7 @@
 		-o-transform: translate3d(0,0,0);
 		-ms-transform: translate3d(0,0,0);
 		transform: translate3d(0,0,0);
-		background-color: #000000;
+		background-color: #393939;
 		background-image: url("http://joway.wang/css/images/bg.jpg");
 		background-position: bottom left;
 		background-repeat: repeat-x;

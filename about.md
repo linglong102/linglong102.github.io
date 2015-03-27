@@ -11,7 +11,7 @@ image:
 
 
 
-大学生，程序猿，文学爱好者
+大学生，程序猿，写字人
 
 喜欢摄影，旅行，读书。
 
@@ -21,7 +21,7 @@ image:
 
 在这里会写些日常随笔，读书笔记，技术摘要。
 
-至于博客对我的意义，无非是自己为自己死后准备的坟。
+至于博客对我的意义，无非就是座坟，堆砌点活着的证据。
 
 坟上的草，在我年轻时，就看着它一点点长起。
 
@@ -29,7 +29,7 @@ image:
 
 QQ: **670425438**
 
-邮箱：**Joway.W@gmail.com**
+邮箱：**joway@joway.wang**
 
 Facebook:**Joway Wong**
 
@@ -49,39 +49,21 @@ github:[**Joway**](http://github.com/joway)
 
 [joway.github.io](http://joway.github.io)
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
-
->無故尋愁覓恨，
->
->有時似傻如狂。
->
->縱然生得好皮囊，
->
->腹內原來草莽。
->
->潦倒不通世務，
->
->愚頑怕讀文章。
->
->行為偏僻性乖張，
->
->那管世人誹謗！
->
->富貴不知樂業，
->
->貧窮難耐淒涼。
->
->可憐辜負好韶光，
->
->於國於家無望。
->
->天下無能第一，
->
->古今不肖無雙。
->
->寄言紈絝與膏粱：
->
->莫效此兒形狀！
-
-
+<div align="center">
+      	<p>
+        <strong>微信或支付宝扫描二维码即可赞助作者！</strong><br>
+       <img src="http://ww3.sinaimg.cn/mw690/708485bfgw1epa4h2r85lj20dz0dz0u6.jpg" width="220" height="220" alt=""/> 
+       <img src="http://ww3.sinaimg.cn/mw690/708485bfgw1epa4jy4lydj2074074glw.jpg" width="225" height="225" alt=""/>
+       </p>
+</div>
