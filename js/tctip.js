@@ -427,14 +427,14 @@ var tctip =  window.tctip || {
 	generateMyRewardsMain:	function(){
 							this.myRewardsMain = tctipUtil.createElement({className: "myRewards-main"}, 'div', this.myRewards);
 							var obj = {className: "myR-h"};
-							obj[tctipUtil.getTextKey()] =  "喜欢请打赏";
+							obj[tctipUtil.getTextKey()] =  "扫 描 二 维 码 赞 助 作 者";
 							tctipUtil.createElement(obj, 'h1', this.myRewardsMain);
 
 							this.generateMyRewardsbox();
 							
 							var myRewardsBot = tctipUtil.createElement({className: "myR-bot"}, 'p', this.myRewardsMain);
 							obj = {href:"https://github.com/greedying/tctip", target: "_blank"};
-							obj[tctipUtil.getTextKey()] =  "了解更多";
+							obj[tctipUtil.getTextKey()] =  "";
 							tctipUtil.createElement(obj, 'a', myRewardsBot);
 	},
 
@@ -498,7 +498,7 @@ var tctip =  window.tctip || {
 
 								this.myRewardsUbox = tctipUtil.createElement({className: "myRewards-ubox"},"div", this.myRewardsDetail);
 								var obj = {className: "myRewards-code-tit"};
-								obj[tctipUtil.getTextKey()] =  "扫描二维码赞助作者";
+								obj[tctipUtil.getTextKey()] =  "扫 描 二 维 码 赞 助 作 者";
 								tctipUtil.createElement(obj,"p", this.myRewardsUbox);
 								var myRewardsCode = tctipUtil.createElement({className: "myRewards-code"}, 'div',  this.myRewardsUbox);
 								if(tctip.currentData.hasOwnProperty('qrimg')){

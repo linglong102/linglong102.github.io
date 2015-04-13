@@ -8,7 +8,6 @@ tags: Qt
 
 # 综述 #
 
-
 		Qt 是一个跨平台的框架。跨平台 GUI 通常有三种实现策略：
 	
 		API 映射：API 映射是说，界面库使用同一套 API，将其映射到不同的底层平台上面。
@@ -18,11 +17,6 @@ tags: Qt
 		GUI 模拟：任何平台都提供了图形绘制函数，例如画点、画线、画面等。有些工具库利用这些基本函数，在不同绘制出自己的组件，这就是 GUI 模拟。
 		
 		Qt Creator 帮助我们在 HelloWorld 项目文件夹下生成了四个文件：main.cpp，mainwindow.cpp，mainwindow.h 和 HelloWorld.pro。pro 文件就是 Qt 工程文件（project file），由 qmake 处理，生成 make 程序所需要的 makefile；main.cpp 里面就是一个main函数，作为应用程序的入口函数；其他两个文件就是先前我们曾经指定的文件名的文件。
-
-
-----------
-
-# 信号槽 #
 		
 		
 		#include <QApplication>
@@ -38,6 +32,11 @@ tags: Qt
 		    return app.exec();
 		}
 		
+
+
+----------
+# 信号槽 #
+
 		
 		前两行是 C++ 的 include 语句，这里我们引入的是QApplication以及QLabel这两个类。main()函数中第一句是创建一个QApplication类的实例。对于 Qt 程序来说，main()函数一般以创建 application 对象
 		
@@ -53,21 +52,6 @@ tags: Qt
 		main()函数最后，调用app.exec()，开启事件循环。我们现在可以简单地将事件循环理解成一段无限循环。正因为如此，我们在栈上构建了QLabel对象，却能够一直显示在那里（试想，如果不是无限循环，main()函数立刻会退出，QLabel对象当然也就直接析构了）。
 	
 	
-	
-	
-	
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
