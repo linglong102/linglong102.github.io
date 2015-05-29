@@ -3,7 +3,7 @@ layout: post
 title: "图书馆管理系统（C++控制台应用）" 
 comments: true
 share: true
-tags: C++
+tags: C/C++
 ---
 
 

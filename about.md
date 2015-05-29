@@ -11,7 +11,7 @@ image:
 
 
 
-大学生，程序猿，写字人
+学生，程序猿，写字人
 
 喜欢摄影，旅行，读书。
 
@@ -25,7 +25,7 @@ image:
 
 坟上的草，在我年轻时，就看着它一点点长起。
 
-新浪微博:[**Joway_**](http://weibo.com/670425438?from=profile&wvr=5&loc=infdomain)
+新浪微博:[**JowayW**](http://weibo.com/670425438?from=profile&wvr=5&loc=infdomain)
 
 QQ: **670425438**
 
@@ -67,3 +67,21 @@ github:[**Joway**](http://github.com/joway)
        <img src="http://ww3.sinaimg.cn/mw690/708485bfgw1epa4jy4lydj2074074glw.jpg" width="225" height="225" alt=""/>
        </p>
 </div>
+
+
+<script>
+var isOnPc=!(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent));
+if(isOnPc) {
+	window.tctipConfig = {
+		staticPrefix: "http://joway.wang",
+		buttonImageId: 6,
+		list:{
+			alipay: { qrimg: "http://joway.wang/images/alipay.png"},
+			weixin:{qrimg: "http://joway.wang/images/wechat.png"}
+		}
+	};
+}
+</script>
+
+
+<script src="/js/tctip.min.js"></script>

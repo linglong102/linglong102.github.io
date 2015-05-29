@@ -3,7 +3,7 @@ layout: post
 title: "高精度算法——bign" 
 comments: true
 share: true
-tags: ACM
+tags: C/C++
 ---
 
 

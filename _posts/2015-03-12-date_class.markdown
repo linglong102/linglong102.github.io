@@ -3,7 +3,7 @@ layout: post
 title: "多功能日期类" 
 comments: true
 share: true
-tags: C++类
+tags: C/C++
 ---
 
 

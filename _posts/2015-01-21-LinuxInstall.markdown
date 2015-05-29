@@ -3,7 +3,7 @@ layout: post
 title: "Win7下对Linux的双系统安装过程总结" 
 comments: true
 share: true
-tags: Linux
+tags: 笔记
 ---
 
 最近在折腾Linux的Ubuntu版本，对于一个新手，首先安装就成了个麻烦，虽然网上有很多教程，但是感觉都不太完整和细致，所以把之前的折腾索性整理出来。

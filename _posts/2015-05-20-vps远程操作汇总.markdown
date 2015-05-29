@@ -1,0 +1,23 @@
+---
+layout: post
+title: "VPS远程操作汇总" 
+comments: true
+share: true
+tags: 笔记
+---
+
+
+1. 直接在终端里（如cmd）中：
+	
+	ssh root@你vps的IP地址
+
+再输入密码，即可登录！
+
+----------
+
+2. 切换用户为root​，如果你不知道root密码的话可以通过一下命令更改密码并切换。（输入密码会不显示，直接输入即可）
+
+		$ sudo passwd root 
+		$ su -
+
+​​

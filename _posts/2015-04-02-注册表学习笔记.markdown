@@ -144,12 +144,12 @@ ShellNew子键定义了将此文件类型加入到桌面右键弹出菜单的“
 
 ②在shellex\ContextMenuHandlers键下修改右键菜单的键值ID
 
-清空回收站      RecycleBin： {645FF040-5081-101B-9F08-00AA002F954E}
-复制到文件夹   Copy To：      {C2FBB630-2971-11d1-A18C-00C04FD75D13}
-移动到文件夹  Move To：      {C2FBB631-2971-11D1-A18C-00C04FD75D13}
-发送到             Send To：      {7BA4C740-9E81-11CF-99D3-00AA004AE837}
-新建                New：            {D969A300-E7FF-11d0-A93B-00A0C90F2719}
-打开方式         OpenWith：    {09799AFB-AD67-11d1-ABCD-00C04FC30936}
+- 清空回收站      RecycleBin： {645FF040-5081-101B-9F08-00AA002F954E}
+- 复制到文件夹   Copy To：      {C2FBB630-2971-11d1-A18C-00C04FD75D13}
+- 移动到文件夹  Move To：      {C2FBB631-2971-11D1-A18C-00C04FD75D13}
+- 发送到             Send To：      {7BA4C740-9E81-11CF-99D3-00AA004AE837}
+- 新建                New：            {D969A300-E7FF-11d0-A93B-00A0C90F2719}
+- 打开方式         OpenWith：    {09799AFB-AD67-11d1-ABCD-00C04FC30936}
 
 
 ----------
@@ -310,6 +310,235 @@ DataValuex立即跟随冒号 （或等号后 REG_SZ），并且必须是以适�
 要创建 .reg 文件，请使用 Regedit.exe **导出您想要删除的注册表项**，然后使用记事本来编辑该.reg 文件并插入连字符。
 
 
+----------
 
 
+<br>
+<br>
+<br>
+
+2015-4-15日更新：
+
+添加右键联级式菜单：
+
+MSDN样例：
+
+	Windows Registry Editor Version 5.00
+	
+	[HKEY_CLASSES_ROOT\*\shell\msdncascade]
+	"MUIVerb"="ExtendedSubCommandsKey cascade"
+	"ExtendedSubCommandsKey"="*\\shell\\msdncascade\\menus\\flyout1"
+	
+	[HKEY_CLASSES_ROOT\*\shell\msdncascade\menus]
+	
+	[HKEY_CLASSES_ROOT\*\shell\msdncascade\menus\flyout1]
+	
+	[HKEY_CLASSES_ROOT\*\shell\msdncascade\menus\flyout1\shell]
+	
+	[HKEY_CLASSES_ROOT\*\shell\msdncascade\menus\flyout1\shell\cmd1]
+	"MUIVerb"="flyout2"
+	"ExtendedSubCommandsKey"="*\\shell\\msdncascade\\menus\\flyout2"
+	
+	[HKEY_CLASSES_ROOT\*\shell\msdncascade\menus\flyout1\shell\cmd2]
+	"MUIVerb"="Notepad"
+	
+	[HKEY_CLASSES_ROOT\*\shell\msdncascade\menus\flyout1\shell\cmd2\command]
+	@="notepad.exe %1"
+	
+	[HKEY_CLASSES_ROOT\*\shell\msdncascade\menus\flyout2]
+	"ExtendedSubCommandsKey"=""
+	
+	[HKEY_CLASSES_ROOT\*\shell\msdncascade\menus\flyout2\shell]
+	
+	[HKEY_CLASSES_ROOT\*\shell\msdncascade\menus\flyout2\shell\cmd1]
+	"MUIVerb"="Calculator"
+	
+	[HKEY_CLASSES_ROOT\*\shell\msdncascade\menus\flyout2\shell\cmd1\command]
+	@="calc.exe"
+	
+	[HKEY_CLASSES_ROOT\*\shell\msdncascade\menus\flyout2\shell\cmd2]
+	"MUIVerb"="flyout3"
+	"ExtendedSubCommandsKey"="*\\shell\\msdncascade\\menus\\flyout3"
+	
+	[HKEY_CLASSES_ROOT\*\shell\msdncascade\menus\flyout2\shell\cmd3]
+	"MUIVerb"="Paint"
+	
+	[HKEY_CLASSES_ROOT\*\shell\msdncascade\menus\flyout2\shell\cmd3\command]
+	@="mspaint.exe \"%1\""
+	
+	[HKEY_CLASSES_ROOT\*\shell\msdncascade\menus\flyout2\shell\cmd4]
+	"MUIVerb"="Sticky note"
+	
+	[HKEY_CLASSES_ROOT\*\shell\msdncascade\menus\flyout2\shell\cmd4\command]
+	@="StikyNot.exe"
+	
+	[HKEY_CLASSES_ROOT\*\shell\msdncascade\menus\flyout3]
+	
+	[HKEY_CLASSES_ROOT\*\shell\msdncascade\menus\flyout3\shell]
+	
+	[HKEY_CLASSES_ROOT\*\shell\msdncascade\menus\flyout3\shell\cmd1]
+	"MUIVerb"="Command prompt"
+	
+	[HKEY_CLASSES_ROOT\*\shell\msdncascade\menus\flyout3\shell\cmd1\command]
+	@="cmd.exe"
+	
+	[HKEY_CLASSES_ROOT\*\shell\msdncascade\menus\flyout3\shell\cmd2]
+	"MUIVerb"="Snipping tool"
+	
+	[HKEY_CLASSES_ROOT\*\shell\msdncascade\menus\flyout3\shell\cmd2\command]
+	@="SnippingTool.exe"
+	
+	[HKEY_CLASSES_ROOT\*\shell\msdncascade\menus\flyout3\shell\cmd3]
+	"MUIVerb"="Sound Recorder"
+	
+	[HKEY_CLASSES_ROOT\*\shell\msdncascade\menus\flyout3\shell\cmd3\command]
+	@="SoundRecorder.exe"
+	
+	
+效果：
+
+![](http://ww1.sinaimg.cn/mw690/708485bfgw1er684gs1x1j20e903fmxt.jpg)
+
+做法：
+
+![](http://ww1.sinaimg.cn/mw690/708485bfgw1er684hfbjpj20qj0avmz1.jpg)
+
+![](http://ww4.sinaimg.cn/mw690/708485bfgw1er684it00tj20qq0ck40k.jpg)
+
+![](http://ww1.sinaimg.cn/mw690/708485bfgw1er684i1hozj20tn0bjtaw.jpg)
+
+![](http://ww2.sinaimg.cn/mw690/708485bfgw1er684j3fqkj20n70b4jsu.jpg)
+
+没有截图的都是一般性操作，
+
+把该注册表导出后的reg文件：
+
+	Windows Registry Editor Version 5.00
+	
+	[HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\FileHelper]
+	@=""
+	"MUIVerb"="FileHelper"
+	"ExtendedSubCommandsKey"="AllFilesystemObjects\\shell\\FileHelper\\menus\\FileHelper"
+	
+	[HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\FileHelper\menus]
+	@=""
+	
+	[HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\FileHelper\menus\FileHelper]
+	@=""
+	
+	[HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\FileHelper\menus\FileHelper\shell]
+	@=""
+	
+	[HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\FileHelper\menus\FileHelper\shell\cmd1]
+	@=""
+	"MUIVerb"="压缩"
+	"ExtendedSubCommandsKey"="AllFilesystemObjects\\shell\\FileHelper\\menus\\FileHelper\\shell\\cmd1"
+	
+	[HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\FileHelper\menus\FileHelper\shell\cmd1\shell]
+	@=""
+	
+	[HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\FileHelper\menus\FileHelper\shell\cmd1\shell\7z]
+	@=""
+	"MUIVerb"="压缩到*.7z"
+	
+	[HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\FileHelper\menus\FileHelper\shell\cmd1\shell\7z\command]
+	@="\"C:\\Program Files (x86)\\FileHelper\\7za.exe\" \"a\" \"%1.7z\" \"%1\""
+	
+	[HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\FileHelper\menus\FileHelper\shell\cmd1\shell\rar]
+	@=""
+	"MUIVerb"="压缩到*.rar"
+	
+	[HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\FileHelper\menus\FileHelper\shell\cmd1\shell\rar\command]
+	@="\"C:\\Program Files (x86)\\FileHelper\\7za.exe\" \"a\" \"%1.rar\" \"%1\""
+	
+	[HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\FileHelper\menus\FileHelper\shell\cmd1\shell\tar]
+	@=""
+	"MUIVerb"="压缩到*.tar"
+	
+	[HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\FileHelper\menus\FileHelper\shell\cmd1\shell\tar\command]
+	@="\"C:\\Program Files (x86)\\FileHelper\\7za.exe\" \"a\" \"%1.tar\" \"%1\""
+	
+	[HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\FileHelper\menus\FileHelper\shell\cmd1\shell\zip]
+	@=""
+	"MUIVerb"="压缩到*.zip"
+	
+	[HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\FileHelper\menus\FileHelper\shell\cmd1\shell\zip\command]
+	@="\"C:\\Program Files (x86)\\FileHelper\\7za.exe\" \"a\" \"%1.zip\" \"%1\""
+	
+	[HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\FileHelper\menus\FileHelper\shell\cmd2]
+	@=""
+	"MUIVerb"="解压"
+	
+	[HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\FileHelper\menus\FileHelper\shell\cmd2\command]
+	@="\"C:\\Program Files (x86)\\FileHelper\\7za.exe\" \"x\" \"%1\""
+	
+	[HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\FileHelper\menus\FileHelper\shell\cmd3]
+	@=""
+	"MUIVerb"="加密"
+	
+	[HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\FileHelper\menus\FileHelper\shell\cmd3\command]
+	@="\"C:\\Program Files (x86)\\FileHelper\\fenc.exe\" \"%1\""
+	
+	[HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\FileHelper\menus\FileHelper\shell\cmd4]
+	@=""
+	"MUIVerb"="解密"
+	
+	[HKEY_CLASSES_ROOT\AllFilesystemObjects\shell\FileHelper\menus\FileHelper\shell\cmd4\command]
+	@="\"C:\\Program Files (x86)\\FileHelper\\fdec.exe\" \"%1\""
+	
+
+
+上面的方法是我自己尝试出来的，网上有一种更加流行的方法如下，但是我不知道为什么，在我的电脑上交就是不行。
+
+网上教程：[http://www.bkjia.com/Windowsjc/739060.html](http://www.bkjia.com/Windowsjc/739060.html "http://www.bkjia.com/Windowsjc/739060.html")
+
+步骤1:转到
+
+HKEY_CLASSES_ROOT\*\shell
+
+在这里命名为ContextMenu.
+
+![](http://www.bkjia.com/uploads/allimg/140310/0F45U595-1.png)
+
+然后在左侧空白处鼠标右键,选择新建一个字符串值
+
+![](http://www.bkjia.com/uploads/allimg/140310/0F45S142-2.png)
+
+名字设置为MUIVerb,名字必须为MUIVerb,这就是所谓的标准名字(Canonical Verbs).然后双击它,打开后将其值设置为ContextMenu这个字符串就是在鼠标右键中显示的名称（你当然可以设置为其他的值）
+
+![](http://www.bkjia.com/uploads/allimg/140310/0F45Vc1-3.png)
+
+经过这一步,我们可以在一个具体的文件上鼠标右键了,就会出现一个名字为ContextMenu的鼠标右键选项，注意是一个文件,而不是一个目录.也就是说,这个时候我在一个应用程序,doc文档,txt文本或者图片上鼠标右键会出现而在一个包含有子文件的文件夹上或者桌面上鼠标右键是不会出现的.
+
+然后我们需要为我们添加的选项添加命令,和建立MUIVerb同样的步骤建立一个SubCommands,
+
+其值设置为ContextMenu.1;ContextMenu.2;ContextMenu.3;ContextMenu.4;ContextMenu.5好的我们暂且先添加这5个选项吧，每一个选项对应于一个命令（应用程序）
+
+![](http://www.bkjia.com/uploads/allimg/140310/0F45T413-6.png)
+
+这时候。在一个应用程序图标上鼠标右键可以看到ContextMenu选项右边出现了一个小小的黑色箭头，不过现在还不能展开，因为我们还没有为其添加具体的应用程序
+
+现在我们来添加具体的命令选项，以使那个黑色的小箭头能够展开。在注册表中展开到下面这个位置：
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\CommandStore\shell\
+
+然后在shell上新建一个键（key），如图所示，名字为ContextMenu.1
+
+![](http://www.bkjia.com/uploads/allimg/140310/0F45W403-8.png)
+
+然后转到ContextMenu.1中，将默认的值设置为应用程序的名字（总之是你想要其显示的字符）
+
+![](http://www.bkjia.com/uploads/allimg/140310/0F45V392-9.png)
+
+然后再在ContextMenu.1上新建一个键，名字为command，然后转到新建的command键，在command键中默认的值设置为应用程序路径
+
+![](http://www.bkjia.com/uploads/allimg/140310/0F45UZ6-10.png)
+
+然后同样的方式建立ContextMenu.2;ContextMenu.3;ContextMenu.4;ContextMenu.5
+
+![](http://www.bkjia.com/uploads/allimg/140310/0F45S118-11.png)
+
+还可以为键添加icon
+
+![](http://www.bkjia.com/uploads/allimg/140310/0F45W2G-13.png)
 

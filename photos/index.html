@@ -2,8 +2,7 @@
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
 <!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
-<head>
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]--><head>
 <meta charset="utf-8">
 <title>Photos &#8211; Joway.W</title>
 <meta name="description" content="Follow your heart .">
@@ -92,6 +91,12 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
 			<li>
 				
 					<a href="http://joway.wang/tags.html">分类</a>
+				 
+			</li>
+	        
+			<li>
+				
+					<a href="http://joway.wang/project.html">项目</a>
 				 
 			</li>
 	        
@@ -445,6 +450,25 @@ list-style:none;
     });
   })( jQuery, window );
 </script>
+
+
+
+<script>
+var isOnPc=!(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent));
+if(isOnPc) {
+	window.tctipConfig = {
+		staticPrefix: "http://joway.wang",
+		buttonImageId: 6,
+		list:{
+			alipay: { qrimg: "http://joway.wang/images/alipay.png"},
+			weixin:{qrimg: "http://joway.wang/images/wechat.png"}
+		}
+	};
+}
+</script>
+
+
+<script src="/js/tctip.min.js"></script>
 
 
 <!-- 百度统计 --> 

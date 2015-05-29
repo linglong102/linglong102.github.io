@@ -3,7 +3,7 @@ layout: post
 title: "如何科学优雅地上网（翻墙）" 
 comments: true
 share: true
-tags: 教程
+tags: 笔记
 ---
 
 

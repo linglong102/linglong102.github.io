@@ -3,7 +3,7 @@ layout: post
 title: "报名/投票/问卷调查 表单在线提交概览" 
 comments: true
 share: true
-tags: 教程
+tags: 笔记
 ---
 
 ## 金数据： ##

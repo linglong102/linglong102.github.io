@@ -34,6 +34,24 @@ description: "An archive of posts sorted by tag."
 	</ul>
 {% endfor %}
 
+
+<script>
+var isOnPc=!(/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent));
+if(isOnPc) {
+	window.tctipConfig = {
+		staticPrefix: "http://joway.wang",
+		buttonImageId: 6,
+		list:{
+			alipay: { qrimg: "http://joway.wang/images/alipay.png"},
+			weixin:{qrimg: "http://joway.wang/images/wechat.png"}
+		}
+	};
+}
+</script>
+
+
+<script src="/js/tctip.min.js"></script>
+
 <!-- 百度统计 --> 
 <script>
 var _hmt = _hmt || [];
